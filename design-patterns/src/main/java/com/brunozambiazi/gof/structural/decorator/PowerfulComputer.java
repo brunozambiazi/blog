@@ -1,9 +1,11 @@
 package com.brunozambiazi.gof.structural.decorator;
 
+/**
+ * Abstract Decorator
+ */
 public abstract class PowerfulComputer implements Computer {
 
     private final Computer originalComputer;
-
 
     protected PowerfulComputer(final Computer originalComputer) {
         this.originalComputer = originalComputer;

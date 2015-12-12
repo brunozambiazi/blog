@@ -3,6 +3,9 @@ package com.brunozambiazi.gof.structural.proxy;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Proxy implementation
+ */
 public class ProductRepositoryCache implements ProductRepository {
 
     private final ProductRepository realRepository = new ProductRepositoryImpl();
