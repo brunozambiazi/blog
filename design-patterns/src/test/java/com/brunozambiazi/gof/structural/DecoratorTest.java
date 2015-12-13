@@ -11,7 +11,15 @@ import static org.junit.Assert.assertEquals;
 /**
  * Allows for the dynamic wrapping of objects in order to modify their existing
  * responsibilities and behaviours.
- * 
+ *
+ * The <b>Component</b> defines the interface for objects that can have
+ * responsibilties added dynamically, and the <b>ConcreteComponent</b> is simply
+ * an implementation of this interface. The <b>Decorator</b> has a reference to
+ * a <b>Component</b>, and also conforms to the Component interface. This is the
+ * important thing to remember, as the Decorator is essentially wrapping the
+ * Component. The <b>ConcreteDecorator</b> just adds responsibilities to the
+ * original Component.
+ *
  * @link https://dzone.com/articles/design-patterns-decorator
  */
 public class DecoratorTest {

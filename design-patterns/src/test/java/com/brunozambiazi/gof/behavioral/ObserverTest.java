@@ -16,6 +16,14 @@ import static org.junit.Assert.assertTrue;
  * Define a one-to-many dependency between objects so that when one object
  * changes state, all its dependents are notified and updated automatically.
  *
+ * The idea behind the pattern is simple - one of more <b>Observers</b> are
+ * interested in the state of a Subject and register their interest with the
+ * <b>Subject</b> by <b>attach</b>ing themselves. When something changes in our
+ * Subject that the Observer may be interested in, a <b>notify</b> message is
+ * sent, which calls the <b>update</b> method in each Observer. When the
+ * Observer is no longer interested in the Subject's state, they can simply
+ * <b>detatch</b> themselves.
+ *
  * @link https://dzone.com/articles/design-patterns-uncovered
  */
 public class ObserverTest {

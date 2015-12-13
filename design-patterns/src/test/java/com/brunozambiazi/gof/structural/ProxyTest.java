@@ -12,7 +12,15 @@ import static org.junit.Assert.assertNotEquals;
 /**
  * Allows for object level access control by acting as a pass through entity or
  * a placeholder object.
- * 
+ *
+ * As usual, when dealing with design patterns we code to interfaces. In this
+ * case, the interface that the client knows about is the <b>Subject</b>. Both
+ * the <b>Proxy</b> and <b>RealSubject</b> objects implement the <b>Subject</b>
+ * interface, but the client may not be able to access the RealSubject without
+ * going through the <b>Proxy</b>. It's quite common that the <b>Proxy</b> would
+ * handle the creation of the <b>RealSubject</b> object, but it will at least
+ * have a reference to it so that it can pass messages along.
+ *
  * @link https://dzone.com/articles/design-patterns-proxy
  */
 public class ProxyTest {
